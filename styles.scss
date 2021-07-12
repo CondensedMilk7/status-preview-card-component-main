@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+
+// main background
+$dark-blue: hsl(233, 47%, 7%);
+// card background
+$desat-blue: hsl(244, 38%, 16%);
+// accent
+$soft-violet: hsla(277, 64%, 61%, 0.5);
+
+// main heading, stats
+$white: hsl(0, 0%, 100%);
+// main paragraph
+$trans-white: hsla(0, 0%, 100%, 0.75);
+// stat headings)
+$trans-white2: hsla(0, 0%, 100%, 0.6);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  // font-family: 'Lexend Deca', sans-serif;
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: $dark-blue;
+
+    .container {
+      margin: 1.5rem;
+      background: $desat-blue;
+      text-align: center;
+      line-height: 1.6rem;
+      overflow: hidden;
+      border-radius: 6px;
+
+      @media (min-width: 40rem) {
+        display: flex;
+        flex-direction: row-reverse;
+      }
+
+      p {
+        color: $trans-white;
+      }
+
+      .img-container,
+      .desc,
+      .stats {
+        margin-bottom: 2.5rem;
+      }
+
+      .desc,
+      .stats {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+      }
+
+      .img-container {
+        height: 16rem;
+        width: auto;
+
+        @media (min-width: 40rem) {
+          // set the new desktop image as background
+        }
+        .image {
+          height: 16rem;
+          width: auto;
+          background: url(./images/image-header-mobile.jpg);
+          filter: contrast(1.5) brightness(70%) saturate(140%);
+          background-size: cover;
+          position: relative;
+          box-shadow: inset 0 0 0 1000px $soft-violet;
+        }
+      }
+
+      .desc {
+        h2 {
+          line-height: 2.5rem;
+          font-size: 1.8rem;
+          margin-bottom: 1rem;
+          font-weight: bold;
+          color: $white;
+        }
+        #insights {
+          color: $soft-violet;
+        }
+      }
+      .stats {
+        h2 {
+          color: $white;
+          margin-bottom: 0.8rem;
+        }
+        p {
+          font-size: 0.8rem;
+          font-family: "Lexend Deca", sans-serif;
+          letter-spacing: 0.1rem;
+          color: $trans-white2;
+        }
+      }
+      .stat {
+        margin: 2rem;
+      }
+    }
+    footer {
+      margin-top: auto;
+    }
+  }
+}
