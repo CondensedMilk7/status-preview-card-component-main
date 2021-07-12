@@ -11,6 +11,7 @@ html {
   font-size: 15px;
 }
 html body {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,30 +26,37 @@ html body .container {
   overflow: hidden;
   border-radius: 6px;
 }
-@media (min-width: 40rem) {
+@media (min-width: 846px) {
   html body .container {
     display: flex;
     flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    max-width: 70rem;
   }
 }
 html body .container p {
   color: rgba(255, 255, 255, 0.75);
 }
-html body .container .img-container,
+html body .container .image,
 html body .container .desc,
 html body .container .stats {
   margin-bottom: 2.5rem;
+}
+@media (max-width: 57.5rem) {
+  html body .container .image,
+html body .container .desc,
+html body .container .stats {
+    margin: 0;
+  }
 }
 html body .container .desc,
 html body .container .stats {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
 }
-html body .container .img-container {
-  height: 16rem;
-  width: auto;
-}
-html body .container .img-container .image {
+html body .container .image {
   height: 16rem;
   width: auto;
   background: url(./images/image-header-mobile.jpg);
@@ -57,31 +65,69 @@ html body .container .img-container .image {
   position: relative;
   box-shadow: inset 0 0 0 1000px rgba(170, 92, 219, 0.5);
 }
-html body .container .desc h2 {
+@media (min-width: 846px) {
+  html body .container .image {
+    background: url(./images/image-header-desktop.jpg) no-repeat cover;
+    width: 50%;
+    margin: 0;
+    height: 28rem;
+  }
+}
+html body .container .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+@media (min-width: 846px) {
+  html body .container .info {
+    width: 50%;
+    padding: 2rem 4rem 0 2rem;
+  }
+}
+html body .desc {
+  margin: 0;
+}
+html body .desc h2 {
   line-height: 2.5rem;
   font-size: 1.8rem;
   margin-bottom: 1rem;
   font-weight: bold;
   color: white;
 }
-html body .container .desc #insights {
+html body .desc #insights {
   color: rgba(170, 92, 219, 0.5);
 }
-html body .container .stats h2 {
+@media (min-width: 846px) {
+  html body .stats {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 0;
+  }
+}
+html body .stats h2 {
   color: white;
   margin-bottom: 0.8rem;
 }
-html body .container .stats p {
+html body .stats p {
   font-size: 0.8rem;
   font-family: "Lexend Deca", sans-serif;
   letter-spacing: 0.1rem;
   color: rgba(255, 255, 255, 0.6);
 }
-html body .container .stat {
+html body .stats .stat {
   margin: 2rem;
 }
-html body footer {
-  margin-top: auto;
+@media (min-width: 846px) {
+  html body .stats .stat {
+    margin-left: 0;
+  }
+}
+html body .attribution {
+  color: white;
+}
+html body .attribution a {
+  color: #aa5cdb;
 }
 
 /*# sourceMappingURL=styles.css.map */

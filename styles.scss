@@ -26,6 +26,7 @@ html {
   font-size: 15px;
   // font-family: 'Lexend Deca', sans-serif;
   body {
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -40,19 +41,27 @@ html {
       overflow: hidden;
       border-radius: 6px;
 
-      @media (min-width: 40rem) {
+      @media (min-width: 846px) {
         display: flex;
         flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        max-width: 70rem;
+        // max-height: 26.25rem;
       }
 
       p {
         color: $trans-white;
       }
 
-      .img-container,
+      .image,
       .desc,
       .stats {
         margin-bottom: 2.5rem;
+        @media (max-width: 57.5rem) {
+          margin: 0;
+        }
       }
 
       .desc,
@@ -61,54 +70,76 @@ html {
         padding-right: 2.5rem;
       }
 
-      .img-container {
+      .image {
         height: 16rem;
         width: auto;
+        background: url(./images/image-header-mobile.jpg);
+        filter: contrast(1.5) brightness(70%) saturate(140%);
+        background-size: cover;
+        position: relative;
+        box-shadow: inset 0 0 0 1000px $soft-violet;
 
-        @media (min-width: 40rem) {
-          // set the new desktop image as background
-        }
-        .image {
-          height: 16rem;
-          width: auto;
-          background: url(./images/image-header-mobile.jpg);
-          filter: contrast(1.5) brightness(70%) saturate(140%);
-          background-size: cover;
-          position: relative;
-          box-shadow: inset 0 0 0 1000px $soft-violet;
+        @media (min-width: 846px) {
+          background: url(./images/image-header-desktop.jpg) no-repeat cover;
+          width: 50%;
+          margin: 0;
+          height: 28rem; // Might mess things up when browser is zoomed in
         }
       }
 
-      .desc {
-        h2 {
-          line-height: 2.5rem;
-          font-size: 1.8rem;
-          margin-bottom: 1rem;
-          font-weight: bold;
-          color: $white;
-        }
-        #insights {
-          color: $soft-violet;
+      .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        @media (min-width: 846px) {
+          width: 50%;
+          padding: 2rem 4rem 0 2rem;
         }
       }
-      .stats {
-        h2 {
-          color: $white;
-          margin-bottom: 0.8rem;
-        }
-        p {
-          font-size: 0.8rem;
-          font-family: "Lexend Deca", sans-serif;
-          letter-spacing: 0.1rem;
-          color: $trans-white2;
-        }
+    }
+
+    .desc {
+      margin: 0;
+      h2 {
+        line-height: 2.5rem;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        font-weight: bold;
+        color: $white;
+      }
+      #insights {
+        color: $soft-violet;
+      }
+    }
+    .stats {
+      @media (min-width: 846px) {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-left: 0;
+      }
+      h2 {
+        color: $white;
+        margin-bottom: 0.8rem;
+      }
+      p {
+        font-size: 0.8rem;
+        font-family: "Lexend Deca", sans-serif;
+        letter-spacing: 0.1rem;
+        color: $trans-white2;
       }
       .stat {
         margin: 2rem;
+        @media (min-width: 846px) {
+          margin-left: 0;
+        }
       }
     }
-    footer {
-      margin-top: auto;
+    .attribution {
+      color: white;
+      a {
+        color: hsl(277, 64%, 61%);
+      }
     }
   }
 }
