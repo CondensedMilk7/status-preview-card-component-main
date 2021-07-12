@@ -27,7 +27,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/CondensedMilk7/status-preview-card-component-main)
-- Live Site URL: [Netlify](https://your-live-site-url.com)
+- Live Site URL: [Netlify](https://practical-goldwasser-5f63ed.netlify.app)
 
 ## My process
 
