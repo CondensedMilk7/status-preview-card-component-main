@@ -88,10 +88,12 @@ html {
       }
 
       .info {
+        margin-top: 2.5rem;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         @media (min-width: 846px) {
+          margin-top: 0;
           width: 50%;
           padding: 2rem 4rem 0 2rem;
         }
@@ -99,7 +101,6 @@ html {
     }
 
     .desc {
-      margin: 0;
       h2 {
         line-height: 2.5rem;
         font-size: 1.8rem;
